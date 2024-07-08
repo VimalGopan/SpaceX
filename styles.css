@@ -1,0 +1,320 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    background: none;
+    color: white;
+
+}
+@font-face {
+    font-family: 'SpaceXfontsBold';
+    src: url('Fonts/DDB.ttf' ) format('truetype'),
+        url('Fonts/DDB.woff') format('woff'),
+        url('Fonts/DDB.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'SpaceXfonts';
+    src: 
+        url('Fonts/DD.ttf' ) format('truetype'),
+        url('Fonts/DD.ttf' ) format('woff'),
+        url('Fonts/DD.ttf' ) format('woff2');
+}
+@font-face {
+    font-family: 'SpaceXfontsEXP';
+    src: 
+        url('Fonts/DDEXP.ttf' ) format('truetype'),
+        url('Fonts/DDEXP.ttf' ) format('woff'),
+        url('Fonts/DDEXP.ttf' ) format('woff2');
+}
+body {
+    font-family: 'SpaceXfontsBold', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    background-color: black;
+}
+.container{
+    background-color: transparent;
+    position: sticky;
+}
+
+.bang {
+    box-sizing: border-box;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 50px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    gap: 1rem;
+}
+
+.logo-container{
+    background: none;
+    width: 225px;
+    height: auto;
+}
+
+.logo-container img{
+    background-color: none;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.mainmenu{
+    margin-right: 50px;
+}
+
+.mainmenu ul {
+    display: flex;
+}
+
+.mainmenu ul li {
+    position: relative;
+    margin-right: 5px;
+    padding-bottom: 2px;
+    
+}
+
+ul{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+
+nav a{
+    text-decoration: none;
+    text-transform: none;
+    color: white;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 0;
+    margin: 13px;
+    position: relative;
+}
+
+nav a:hover{
+    color: white;
+}
+
+nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 0.5px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.19,1,0.22,1);
+    transform-origin: right center;
+
+}
+
+nav a:hover::after{
+    transform: scaleY(1);
+    transform-origin: left center;
+    transition-duration: 0.4s;
+}
+
+
+.menu-container{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    background-color: none;
+    margin-top: 0;
+    padding: 0;
+    border: 0;
+    gap: 2rem   ;
+}
+.menu-icon{
+    background-color: none;   
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 20px;
+    height: 18px;
+}
+
+section{
+    position: relative;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.first {
+    background-image: url('/SpaceX/Pictures/1.jpg')
+}
+
+.second {
+    background-image: url('/SpaceX/Pictures/2.jpg')
+}
+
+.third {
+    background-image: url('/SpaceX/Pictures/3.jpg')
+}
+
+.four {
+    background-image: url('/SpaceX/Pictures/4.jpg')
+}
+
+.five {
+    background-image: url('/SpaceX/Pictures/5.jpg')
+}
+
+h1 {
+    font-size: 50px;
+    animation: textBounce 0.5s ease-in-out 0.2s;
+    animation-fill-mode: both;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: 'SpaceXfonts', sans-serif;
+    font-weight: 300;
+    animation: textBounce 0.5s ease-in-out;
+    animation-fill-mode: both;
+}
+
+.inner {
+    position: absolute;
+    bottom: 115px;
+    left: 100px;
+    max-width: 560px;
+}
+.inner a {
+    animation: textBounce 0.5s ease-in-out 0.4s;
+    animation-fill-mode: both;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    min-width: 165px;
+    height: 55px;
+    padding: 18px;
+    margin-top: 25px;
+    border: 2px solid rgb(255, 255, 255);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hover{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform .4s;
+}
+
+
+.button:hover .hover{
+    transform: scaleY(1);
+    transform-origin: bottom center;
+}
+
+.effect{
+    color: rgb(255, 255, 255);
+    width: 100%;
+    transition: color .2s;
+    position: relative;
+}
+
+.button:hover .effect{
+    color: black;
+}
+
+
+.arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: arrowBounce 3s infinite;
+}
+
+@keyframes arrowBounce{
+    0%, 100%
+    {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+    20%, 50%, 60%, 70%
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes textBounce{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(140px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    position: relative;
+    padding: 35px 0;
+    background-color: black;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 60px;
+}
+
+footer ul li {
+    margin-right: 30px;
+    color: white;
+    font-size: 12px;
+    line-height: 1;
+    margin-right: 40px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li b {
+    color: white;
+    text-decoration: none;
+    font-family: "SpaceXfonts";
+    font-weight: 100;
+}
